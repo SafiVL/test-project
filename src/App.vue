@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="narrow-column">
-      <router-link to="/catalog">
+      <router-link to="/">
         <button class="button">Каталог</button>
       </router-link>
       <router-link to="/cart">

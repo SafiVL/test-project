@@ -16,18 +16,18 @@
           <td>{{ product.price }}</td>
           <td>{{ product.quantity }}</td>
           <td>
-            {{ `${product.price * product.quantity}` }}
+            {{ product.price * product.quantity }}
             <span style="cursor: pointer" @click="removeProduct(product)">✖</span>
           </td>
         </tr>
         <tr>
-          <td colspan="4"> Итого: {{ `${ mainStore.totalPrice }`}}</td>
+          <td colspan="4" class="total"> Итого: {{  mainStore.totalPrice }}</td>
         </tr>
         </tbody>
       </table>
       <div class="actions-btn">
         <button class="buttonIcon" @click="generateJSON()">Берём!</button>
-        <router-link to="/catalog">
+        <router-link to="/">
           <button>Пожалуй откажусь</button>
         </router-link>
       </div>
@@ -59,23 +59,3 @@ export default {
   }
 }
 </script>
-<style>
-table {
-  border-collapse: collapse;
-  border-spacing: 6px;
-  text-align: center;
-}
-table tbody tr:last-child td {
-  border-top: 1px solid #ddd;
-  text-align: right;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  padding: 10px 20px 40px 20px;
-}
-.actions-btn {
-  justify-content: end;
-  margin-top: 30px;
-  display: flex;
-}
-</style>

@@ -20,7 +20,7 @@ import { useCartStore } from '/src/stores/main.js'
 import CatalogItem from "@/components/CatalogItem";
 
 export default {
-  components: {CatalogItem},
+  components: { CatalogItem },
   setup() {
     const mainStore = useCartStore()
 
